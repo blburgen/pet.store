@@ -16,13 +16,13 @@ import lombok.ToString;
 public class Employee {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long employee_id;
-	
+	private Long employeeId;
+
 	private String employeeFirstName;
 	private String employeeLastName;
 	private String employeePhone;
 	private String employeeJobTitle;
-	
+
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
 	@ManyToOne(cascade = CascadeType.ALL)
